@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540E7F3F2B289156004A8F59 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E7F3E2B289156004A8F59 /* GameOverView.swift */; };
 		5437E1172B17388500EC6269 /* HowManyMultiplesQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5437E1162B17388500EC6269 /* HowManyMultiplesQuestion.swift */; };
 		5452C9F22B15FAD500944F8D /* FlashMathsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452C9F12B15FAD500944F8D /* FlashMathsApp.swift */; };
 		5452C9F42B15FAD500944F8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452C9F32B15FAD500944F8D /* ContentView.swift */; };
@@ -16,9 +17,11 @@
 		54961AE22B2350D6003BD39C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54961AE12B2350D6003BD39C /* ViewModel.swift */; };
 		54961AE62B239389003BD39C /* PlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54961AE52B239389003BD39C /* PlayingView.swift */; };
 		54961AEA2B239807003BD39C /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54961AE92B239807003BD39C /* Styles.swift */; };
+		54DA02E92B288EDB000CD5DC /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DA02E82B288EDB000CD5DC /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		540E7F3E2B289156004A8F59 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		5437E1162B17388500EC6269 /* HowManyMultiplesQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowManyMultiplesQuestion.swift; sourceTree = "<group>"; };
 		5452C9EE2B15FAD500944F8D /* FlashMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5452C9F12B15FAD500944F8D /* FlashMathsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashMathsApp.swift; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		54961AE12B2350D6003BD39C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		54961AE52B239389003BD39C /* PlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingView.swift; sourceTree = "<group>"; };
 		54961AE92B239807003BD39C /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		54DA02E82B288EDB000CD5DC /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 		5452C9F02B15FAD500944F8D /* FlashMaths */ = {
 			isa = PBXGroup;
 			children = (
+				54DA02E82B288EDB000CD5DC /* MenuView.swift */,
+				540E7F3E2B289156004A8F59 /* GameOverView.swift */,
 				54961AE52B239389003BD39C /* PlayingView.swift */,
 				54961AE92B239807003BD39C /* Styles.swift */,
 				5452C9F12B15FAD500944F8D /* FlashMathsApp.swift */,
@@ -153,11 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				54961AE22B2350D6003BD39C /* ViewModel.swift in Sources */,
+				54DA02E92B288EDB000CD5DC /* MenuView.swift in Sources */,
 				54961AEA2B239807003BD39C /* Styles.swift in Sources */,
 				5483884C2B17EB0B007762EE /* QuestionView.swift in Sources */,
 				5452C9F42B15FAD500944F8D /* ContentView.swift in Sources */,
 				54961AE62B239389003BD39C /* PlayingView.swift in Sources */,
 				5437E1172B17388500EC6269 /* HowManyMultiplesQuestion.swift in Sources */,
+				540E7F3F2B289156004A8F59 /* GameOverView.swift in Sources */,
 				5452C9F22B15FAD500944F8D /* FlashMathsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
