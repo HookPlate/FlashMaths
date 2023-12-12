@@ -15,6 +15,15 @@ struct QuestionView: View {
     
     //whenever any question us shown shuffle the below array
     let colors: [Color] = [.purple, .blue, .green, .pink, .orange].shuffled()
+    //thanks to autoconnect this starts firing as soon as the view is created.
+    let timer = Timer.publish(every: 1 / 30, on: .main, in: .common).autoconnect()
+    
+    @State private var timeUsed = 0.0
+    
+    var timeRemaining: Double {
+        //capping it so 0 it the absolute lowest we go.
+        max(0, viewModel.timeAllowed - timeUsed)
+    }
     
     var body: some View {
         VStack {
@@ -41,12 +50,42 @@ struct QuestionView: View {
             //leaves us with 1 third of space at the top since spacers subdivide the space between them
             Spacer()
             Spacer()
+            
+            ZStack {
+//                Capsule()
+//                    .fill(.black)
+//                    .frame(height: 50)
+                Capsule()
+                    .fill(.white.gradient)
+                    .frame(height: 50)
+                    .containerRelativeFrame(.horizontal) { value, axis in
+                        value * timeRemaining / viewModel.timeAllowed
+                    }
+                
+                Text("Time: " + timeRemaining.formatted(.number.precision(.fractionLength(2))))
+                    .font(.largeTitle)
+                //ensures 1 takes up the same space as 8
+                    .monospacedDigit()
+                    .blendMode(.difference)
+            }
+            
         }
         .padding(.horizontal)
+        //tell me when the timer fires
+        .onReceive(timer) { time in
+            timeUsed += 1 / 30
+            
+            if timeUsed >= viewModel.timeAllowed {
+                //game over
+            }
+        }
         .transition(.push(from: .trailing))
     }
     
     func select(_ number: Int) {
+        //end the timer now
+        timer.upstream.connect().cancel()
+        
         withAnimation {
             viewModel.check(answer: number)
         }
